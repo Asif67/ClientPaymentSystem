@@ -1,0 +1,138 @@
+.title h1 {
+    font-size: 60px;
+    padding: 30px 0;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+section {
+    padding: 50px 0;
+}
+
+/*Start Header CSS*/
+.header-bar {
+    background: aliceblue;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    opacity: .9;
+}
+
+.logo {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.menu {
+    margin-top: 35px;
+}
+
+.logo img {
+    height: 85px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.menu ul li a {
+    border-radius: 5%;
+    display: block;
+    background: white;
+    padding: 15px 15px;
+    text-decoration: none;
+    transition: all 0.6s;
+}
+
+.menu ul li:hover a {
+    color: #000;
+}
+
+ul.drop-menu {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: tomato;
+    padding: 5px;
+    border-radius: 5%;
+    display: none;
+}
+
+.menu ul li.drop:hover .drop-menu {
+    color: #000;
+    display: block;
+}
+
+li.drop {
+    position: absolute;
+}
+
+.drop .drop-menu li {
+    display: block;
+    margin: 5px;
+    padding: 1px 1px;
+    border-radius: 5%;    
+}
+
+.social-icon li {
+    display: inline-block;
+}
+
+.social-icon {
+    margin-top: 65px;
+}
+
+.header-section,
+.footer-section {
+    height: 400px;
+    background-image: url(../images/header.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text_over_image.text-center img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.text-block {
+    color: white;
+}
+
+/*End Header CSS*/
+.portfolio-image {
+    border: 1px solid;
+    margin: 15px;
+    padding: 15px;
+}
+
+.portfolio-image img {
+    height: 100px;
+    width: 100px;
+}
+
+input[type="text"] {
+    margin: 10px;
+    padding: 5px;
+}
+
+label {
+    padding: 10px;
+}
+
+button {
+    border-radius: 20%;
+    color: aliceblue;
+    background-color: lightblue;
+    margin: 10px;
+
+}
