@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,25 +38,10 @@ session_start();
                         <div class="col-md-8 text-center">
                             <div class="menu">
                                 <ul>
-                                    <li><a href="index.php">Home</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <?php
-                                    if (isset($_SESSION["useruid"])) {
-                                        echo '<li><a href="profile.php">Profile</a></li>';
-                                        echo '<li><a href="includes/logout.inc.php">Log Out</a></li>';
-                                        echo '
-                                            <li class="drop"><a href="">Services</a>
-                                                <ul class="drop-menu">
-                                                    <li><a href="diseaseInsert.php">Upload Disease Sample Image</a></li>
-                                                    <li><a href="diseaseShow.php">Explore Disease Sample Image</a></li>
-                                                </ul>
-                                            </li>';
-                                    } else {
-                                        echo '<li><a href="signup.php">Sign Up</a></li>';
-                                        echo '<li><a href="login.php">Log In</a></li>';
-                                    }
-                                    ?>
+                                    <li><a href="clientinfo.php">Home</a></li>
+                                    <li><a href="clientdue.php">Due</a></li>
+                                    <li><a href="clientpayment.php">Payment</a></li>
+                                    
                                 </ul>
                             </div>
                         </div>
