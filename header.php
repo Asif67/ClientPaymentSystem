@@ -26,59 +26,35 @@
 
 <body>
     <header>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="header-bar">
-                    <div class="row">
-                        <div class="col-md-2">
-                            <div class="logo">
-                                <img src="images/logo.png" alt="">
-                            </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Due
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="clientdue.php">Insert</a>
+                            <a class="dropdown-item" href="clientdueshow.php">Show</a>
                         </div>
-                        <div class="col-md-8 text-center">
-                            <div class="menu">
-                                <ul>
-                                    <li><a href="clientinfo.php">Home</a></li>
-                                    <li><a href="clientdue.php">Due</a></li>
-                                    <li><a href="clientpayment.php">Payment</a></li>
-                                    
-                                </ul>
-                            </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Payment
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="clientpayment.php">Insert</a>
+                            <a class="dropdown-item" href="clientpaymentshow.php">Show</a>
                         </div>
-                        <div class="col-md-2">
-                            <div class="social-icon">
-                                <li>
-                                    <i class="fa fa-facebook-square"></i>
-                                </li>
-                                <li>
-                                    <i class="fa fa-google-plus-square"></i>
-                                </li>
-                                <li>
-                                    <i class="fa fa-linkedin-square"></i>
-                                </li>
-                                <li>
-                                    <i class="fa fa-pinterest-square"></i>
-                                </li>
-                                <li>
-                                    <i class="fa fa-twitter-square"></i>
-                                </li>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="header-section">
-                        <div class="text_over_image text-center">
-                            <img src="images/logo.png" height=200px width="100%" style="align-content: center-align; padding: 20px;" alt="header">
-                            <div class="text-block">
-                                <h4>Bio</h4>
-                                <p>Plant Disease Detection Web Portal</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </nav>
     </header>
