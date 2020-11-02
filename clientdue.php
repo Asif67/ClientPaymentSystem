@@ -27,7 +27,7 @@ $blds = populateClientName($conn);
                         <div class="row row-space">
                             <div class="col-md-12">
                                 <div class="input-group">
-                                    <select class="input--style-4" name = "client_id">
+                                    <select class="input--style-4" name="client_id">
                                         <?php for ($i = 0; $i < count($blds); $i++) : ?>
                                             <option value="<?= $blds[$i]["id"] ?>"><?= $blds[$i]["client_name"] ?></option>
                                         <?php endfor; ?>
@@ -39,6 +39,11 @@ $blds = populateClientName($conn);
                             <button class="btn btn--radius-2 btn--blue" type="submit" name="submit">Submit</button>
                         </div>
                     </form>
+                </div>
+                <div class="card-body">
+                    <?php
+                        include_once 'clientdueshow.php';
+                    ?>
                 </div>
             </div>
         </div>

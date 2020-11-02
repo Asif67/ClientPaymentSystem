@@ -41,8 +41,7 @@
                             Client Informations
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="clientinfo.php">Insert</a>
-                            <a class="dropdown-item" href="clientinfoshow.php">Show</a>
+                            <a class="dropdown-item" href="clientinfo.php">Insert</a>                            
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -50,8 +49,7 @@
                             Due
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="clientdue.php">Insert</a>
-                            <a class="dropdown-item" href="clientdueshow.php">Show</a>
+                            <a class="dropdown-item" href="clientdue.php">Insert</a>                            
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -59,8 +57,7 @@
                             Payment
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="clientpayment.php">Insert</a>
-                            <a class="dropdown-item" href="clientpaymentshow.php">Show</a>
+                            <a class="dropdown-item" href="clientpayment.php">Insert</a>                            
                         </div>
                     </li>
                 </ul>

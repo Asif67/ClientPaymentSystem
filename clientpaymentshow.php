@@ -1,6 +1,6 @@
 <?php
 include 'includes/dbh.inc.php';
-include 'header.php';
+
 
 $sql = "SELECT client_name, payment_date, payment_amount FROM client_info INNER JOIN client_payment;";
 $stmt = mysqli_stmt_init($conn);

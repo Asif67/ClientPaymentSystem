@@ -1,6 +1,6 @@
 <?php
 include 'includes/dbh.inc.php';
-include 'header.php';
+
 
 $sql = "SELECT client_name, client_mobile_number, client_address FROM client_info;";
 $stmt = mysqli_stmt_init($conn);

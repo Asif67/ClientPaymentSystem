@@ -1,11 +1,11 @@
 <?php
 include 'includes/dbh.inc.php';
-include 'header.php';
+
 
 $sql = "SELECT client_name, due_date, due_amount FROM client_info INNER JOIN client_due;";
 $stmt = mysqli_stmt_init($conn);
 mysqli_stmt_prepare($stmt, $sql);
-$stmt->bind_result($payment_date, $payment_amount, $client_name);
+$stmt->bind_result($due_date, $due_amount, $client_name);
 $stmt->execute();
 $stmt->store_result();
 

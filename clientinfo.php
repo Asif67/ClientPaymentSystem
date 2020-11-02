@@ -33,9 +33,14 @@ include 'header.php';
                         </div>
                     </form>
                 </div>
+                <div class="card-body">
+                <?php
+                    include_once 'clientinfoshow.php';
+                ?>
+                </div>
             </div>
         </div>
-    </div>
+    </div>    
     <?php
     if (isset($_GET["error"])) {
         if ($_GET["error"] == "emptyinput") {
