@@ -21,6 +21,16 @@ function emptyClientInfo($name, $mobile_number, $address)
     }
     return $result;
 }
+function emptyClientPayment($payment_date,$payment_amount,$client_id)
+{
+    $result;
+    if (empty($payment_date) || empty($payment_amount) || empty($client_id)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
 
 function invalidUid($username)
 {
@@ -115,7 +125,23 @@ function createClientInfo($conn, $name, $mobile_number, $address)
     header("location: ../clientinfo.php?error=none");
     exit();
 }
+function createClientPayment($conn, $payment_date,$payment_amount,$client_id)
+{
+    $sql = "INSERT INTO client_payment (payment_date,payment_amount,client_id) VALUES (?,?,?); ";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../clientpayment.php?error=stmtfailed");
+        exit();
+    }
+    
+    mysqli_stmt_bind_param($stmt, "sss", $payment_date,$payment_amount,$client_id);
+    mysqli_stmt_execute($stmt);
 
+    $resultData = mysqli_stmt_get_result($stmt);
+    mysqli_stmt_close($resultData);
+    header("location: ../clientpayment.php?error=none");
+    exit();
+}
 function emptyInputLogin($username, $pwd)
 {
     $result;

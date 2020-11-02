@@ -8,23 +8,23 @@ include 'header.php';
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Client Due Form</h2>
-                    <form action="includes/login.inc.php" method="post">
+                    <form action="includes/clientpayment.inc.php" method="post">
                         <div class="row row-space">
                             <div class="col-md-6">
                                 <div class="input-group">
-                                    <input class="input--style-4" type="text" name="name" placeholder="Payment Amount">
+                                    <input class="input--style-4" type="text" name="payment_amount" placeholder="Payment Amount">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="input-group">
-                                    <input class="input--style-4" type="date" name="mobile_number" placeholder="Payment Date">
+                                    <input class="input--style-4" type="date" name="payment_date" placeholder="Payment Date">
                                 </div>
                             </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-md-12">
                                 <div class="input-group">
-                                    <input class="input--style-4" type="text" name="address" placeholder="Client ID">
+                                    <input class="input--style-4" type="text" name="client_id" placeholder="Client ID">
                                 </div>
                             </div>                            
                         </div>
