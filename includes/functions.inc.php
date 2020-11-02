@@ -11,6 +11,17 @@ function emptyInputSignUp($name, $email, $username, $pwd, $pwdRepeat)
     return $result;
 }
 
+function emptyClientInfo($name, $mobile_number, $address)
+{
+    $result;
+    if (empty($name) || empty($mobile_number) || empty($address)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
 function invalidUid($username)
 {
     $result;
@@ -85,6 +96,23 @@ function createUser($conn, $name, $email, $username, $pwd)
     $resultData = mysqli_stmt_get_result($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../signup.php?error=none");
+    exit();
+}
+function createClientInfo($conn, $name, $mobile_number, $address)
+{
+    $sql = "INSERT INTO client_info (client_name,client_address,client_mobile_number) VALUES (?,?,?); ";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../clientinfo.php?error=stmtfailed");
+        exit();
+    }
+    
+    mysqli_stmt_bind_param($stmt, "sss", $name, $mobile_number, $address);
+    mysqli_stmt_execute($stmt);
+
+    $resultData = mysqli_stmt_get_result($stmt);
+    mysqli_stmt_close($resultData);
+    header("location: ../clientinfo.php?error=none");
     exit();
 }
 

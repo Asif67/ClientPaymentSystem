@@ -1,7 +1,7 @@
 CREATE table client_info(
     id int not null AUTO_INCREMENT PRIMARY key,
     client_name varchar(255),
-    Client_address varchar(255),
+    client_address varchar(255),
     client_mobile_number varchar(255)
 );
 CREATE TABLE client_due(

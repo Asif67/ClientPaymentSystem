@@ -8,7 +8,7 @@ include 'header.php';
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Client info Form</h2>
-                    <form action="includes/login.inc.php" method="post">
+                    <form action="includes/clientinfo.inc.php" method="post">
                         <div class="row row-space">
                             <div class="col-md-6">
                                 <div class="input-group">
