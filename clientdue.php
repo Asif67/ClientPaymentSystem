@@ -12,19 +12,19 @@ include 'header.php';
                         <div class="row row-space">
                             <div class="col-md-6">
                                 <div class="input-group">
-                                    <input class="input--style-4" type="text" name="name" placeholder="Due Amount">
+                                    <input class="input--style-4" type="text" name="due_amount" placeholder="Due Amount">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="input-group">
-                                    <input class="input--style-4" type="date" name="mobile_number" placeholder="Due Date">
+                                    <input class="input--style-4" type="date" name="due_date" placeholder="Due Date">
                                 </div>
                             </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-md-12">
                                 <div class="input-group">
-                                    <input class="input--style-4" type="text" name="address" placeholder="Client ID">
+                                    <input class="input--style-4" type="text" name="client_id" placeholder="Client ID">
                                 </div>
                             </div>                            
                         </div>
