@@ -3,24 +3,33 @@ include 'includes/dbh.inc.php';
 include 'header.php';
 ?>
 <?php
-$sql = "SELECT id,client_name FROM client_info;";
+$sql = "SELECT client_name, payment_date, payment_amount FROM client_info INNER JOIN client_payment;";
 $stmt = mysqli_stmt_init($conn);
 mysqli_stmt_prepare($stmt, $sql);
-$stmt->bind_result($id, $client_name);
+$stmt->bind_result($payment_date, $payment_amount, $client_name);
 $stmt->execute();
 $stmt->store_result();
 
 $blds = array();
 while ($stmt->fetch()) {
     $blds[] = array(
-        "id"  => $id,
+        "payment_date" => $payment_date,
+        "payment_amount" => $payment_amount,
         "client_name" => $client_name
     );
 }
 ?>
-
-<select>
+<table>
+    <th>
+    <td>payment_date</td>
+    <td>payment_amount</td>
+    <td>client_name</td>
+    </th>
     <?php for ($i = 0; $i < count($blds); $i++) : ?>
-        <option value="<?= $blds[$i]["id"] ?>"><?= $blds[$i]["client_name"] ?></option>
+        <tr>
+            <td><?= $blds[$i]["payment_date"] ?></td>
+            <td><?= $blds[$i]["payment_amount"] ?></td>
+            <td><?= $blds[$i]["client_name"] ?></td>
+        </tr>
     <?php endfor; ?>
-</select>
+</table>
