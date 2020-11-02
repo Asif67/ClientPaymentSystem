@@ -5,14 +5,8 @@ include 'header.php';
 <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
     <div class="wrapper wrapper--w680">
         <div class="card card-4">
-            <div class="card-body">
-                <?php
-                if (isset($_SESSION["useruid"])) {
-                    echo '<h1 class="title">Logged In Sucessfully, ' .$_SESSION["useruid"]. ' </h1>';                    
-                } else {
-                    echo '<h1 class="title">Please Click Home</h1>';                    
-                }
-                ?>                                
+            <div class="card-body">                
+                <h1 class="title">Please Click Home</h1>            
             </div>
         </div>
     </div>
