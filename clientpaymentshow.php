@@ -18,17 +18,23 @@ while ($stmt->fetch()) {
     );
 }
 ?>
-<table>
-    <th>
-    <td>payment_date</td>
-    <td>payment_amount</td>
-    <td>client_name</td>
-    </th>
-    <?php for ($i = 0; $i < count($blds); $i++) : ?>
-        <tr>
-            <td><?= $blds[$i]["payment_date"] ?></td>
-            <td><?= $blds[$i]["payment_amount"] ?></td>
-            <td><?= $blds[$i]["client_name"] ?></td>
-        </tr>
-    <?php endfor; ?>
-</table>
+<div class="table-responsive-md">
+    <table class="table table-bordered">     
+        <thead>
+            <tr>
+                <th scope="col">Client Full Name</th>
+                <th scope="col">Payment Date</th>
+                <th scope="col">Payment Amount</th>                
+            </tr>
+        </thead>
+        <tbody>
+        <?php for ($i = 0; $i < count($blds); $i++) : ?>
+            <tr>
+                <td><?= $blds[$i]["payment_date"] ?></td>
+                <td><?= $blds[$i]["payment_amount"] ?></td>
+                <td><?= $blds[$i]["client_name"] ?></td>                
+            </tr>
+        <?php endfor; ?>
+        </tbody>        
+    </table>
+</div>

@@ -10,7 +10,7 @@ $blds = populateClientName($conn);
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body">
-                    <h2 class="title">Client Due Form</h2>
+                    <h2 class="title">Client Payment Form</h2>
                     <form action="includes/clientpayment.inc.php" method="post">
                         <div class="row row-space">
                             <div class="col-md-6">
@@ -42,7 +42,7 @@ $blds = populateClientName($conn);
                 </div>
                 <div class="card-body">
                     <?php
-                        include_once 'clientdueshow.php';
+                        include_once 'clientpaymentshow.php';
                     ?>
                 </div>
             </div>
