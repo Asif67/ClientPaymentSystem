@@ -44,6 +44,7 @@
                             <a class="dropdown-item" href="clientinfo.php">Insert</a>                            
                         </div>
                     </li>
+                    <!--
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Due
@@ -52,14 +53,15 @@
                             <a class="dropdown-item" href="clientdue.php">Insert</a>                            
                         </div>
                     </li>
+                    -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Payment
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="clientpayment.php">Insert</a>                            
+                            <a class="dropdown-item" href="dueautomation.php">Insert</a>                            
                         </div>
-                    </li>
+                    </li>                    
                 </ul>
             </div>
         </nav>

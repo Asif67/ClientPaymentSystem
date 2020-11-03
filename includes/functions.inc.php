@@ -39,6 +39,16 @@ function emptyClientPayment($payment_date, $payment_amount, $client_id)
     }
     return $result;
 }
+function emptyClientPaymentCheck($payment_date, $payment_amount, $client_id,$is_due)
+{
+    $result;
+    if (empty($payment_date) || empty($payment_amount) || empty($client_id) || empty($is_due)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
 
 function emptyClientDue($due_date, $due_amount, $client_id)
 {
@@ -84,6 +94,23 @@ function createClientPayment($conn, $payment_date, $payment_amount, $client_id)
     $resultData = mysqli_stmt_get_result($stmt);
     mysqli_stmt_close($resultData);
     header("location: ../clientpayment.php?error=none");
+    exit();
+}
+function createClientPaymentCheck($conn, $payment_date, $payment_amount, $client_id,$is_due)
+{
+    $sql = "INSERT INTO client_payment_check (payment_date,payment_amount,client_id,is_due) VALUES (?,?,?,?); ";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../dueautomation.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "sdii", $payment_date, $payment_amount, $client_id,$is_due);
+    mysqli_stmt_execute($stmt);
+
+    $resultData = mysqli_stmt_get_result($stmt);
+    mysqli_stmt_close($resultData);
+    header("location: ../dueautomation.php?error=none");
     exit();
 }
 

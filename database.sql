@@ -20,3 +20,12 @@ CREATE TABLE client_payment(
 );
 ALTER TABLE client_payment
 ADD FOREIGN KEY (client_id) REFERENCES client_info(id);
+CREATE TABLE client_payment_check(
+	id int(11) PRIMARY KEY AUTO_INCREMENT NOT null,
+    payment_date date NOT null,
+    payment_amount DECIMAL(18,2),
+    is_due tinyint,
+    client_id int
+);
+ALTER TABLE client_payment_check
+ADD FOREIGN KEY (client_id) REFERENCES client_info(id);
